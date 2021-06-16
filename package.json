@@ -1,0 +1,39 @@
+{
+  "name": "depdown",
+  "version": "0.0.0",
+  "description": "Node.js dependency installer",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "source": "source/index.js",
+  "repository": "https://github.com/barelyhuman/depdown",
+  "author": {
+    "url": "https://reaper.im",
+    "name": "Reaper",
+    "email": "ahoy@barelyhuman.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "wrap",
+    "watch": "wrap -w",
+    "fix": "wrap -f",
+    "prepare": "npm run build"
+  },
+  "wrap": {
+    "external": [
+      "path",
+      "child_process",
+      "fs"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@barelyhuman/wrap": "barelyhuman/wrap",
+    "@rollup/plugin-babel": "^5.3.0",
+    "rollup": "^2.51.2",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "kleur": "^4.1.4",
+    "logcons": "^0.0.4"
+  }
+}
