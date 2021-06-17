@@ -30,7 +30,7 @@ $ npx wrap -f # will install standard in devDeps
 
 ```sh
 $ npm i depdown
-#or if you use yarn
+# or if you use yarn
 $ yarn add depdown
 ```
 
