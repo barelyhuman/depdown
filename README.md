@@ -26,13 +26,31 @@ $ npx wrap # will install rollup and other deps in devDeps
 $ npx wrap -f # will install standard in devDeps
 ```
 
+## Install
+
+```sh
+$ npm i depdown
+#or if you use yarn
+$ yarn add depdown
+```
+
 ### Usage
 
-TBD
+```js
+import { depdown } from "depdown";
+
+async function main() {
+  await depdown(["standard"], { tree: "dev" });
+}
+```
 
 ### API
 
-TBD
+#### `depdown: (deps: string[],options: Options) => Promise<void>;`
+
+- `deps` - String of package names to be installed
+- `options`
+  - tree - `enum dev | direct | peer ` (default: `dev`) - where to install the packages in the package.json dependency tree
 
 ### License
 

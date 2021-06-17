@@ -7,7 +7,7 @@ import { logcons } from 'logcons'
 const bullet = white().bold
 const success = green().bold
 
-export const depdown = async (deps) => {
+export const depdown = async (deps, { mode } = {}) => {
   console.log(reset().cyan('Checking for dependencies...'))
 
   const pkg = resolvePackage()
@@ -32,7 +32,24 @@ export const depdown = async (deps) => {
     return
   }
 
-  const cmd = `npm install -D ${toInstall.join(' ')}`
+  let depFlag = '--save-dev'
+
+  switch (mode) {
+    case 'dev': {
+      depFlag = '--save-dev'
+      break
+    }
+    case 'direct': {
+      depFlag = '--save'
+      break
+    }
+    case 'peer': {
+      depFlag = '--peer'
+      break
+    }
+  }
+
+  const cmd = `npm install ${depFlag} ${toInstall.join(' ')}`
 
   console.log(`${bullet('Running:')} ${cmd}`)
 

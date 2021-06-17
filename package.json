@@ -11,6 +11,10 @@
     "name": "Reaper",
     "email": "ahoy@barelyhuman.com"
   },
+  "files": [
+    "dist/**",
+    "index.d.ts"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "wrap",
