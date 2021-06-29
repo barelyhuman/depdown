@@ -1,14 +1,14 @@
-declare enum TreeE {
-  dev = "dev",
-  direct = "direct",
-  peer = "peer",
+declare enum EMode {
+  dev,
+  direct,
+  peer,
 }
 
 declare type Options = {
-  tree: TreeE;
+  mode: keyof typeof EMode;
 };
 
 export declare const depdown: (
   deps: string[],
-  { tree }: Options
+  options: Options
 ) => Promise<void>;

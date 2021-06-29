@@ -40,7 +40,7 @@ $ yarn add depdown
 import { depdown } from "depdown";
 
 async function main() {
-  await depdown(["standard"], { tree: "dev" });
+  await depdown(["standard"], { mode: "dev" });
 }
 ```
 
@@ -50,7 +50,7 @@ async function main() {
 
 - `deps` - String of package names to be installed
 - `options`
-  - tree - `enum dev | direct | peer ` (default: `dev`) - where to install the packages in the package.json dependency tree
+  - `mode` - `enum dev | direct | peer ` (default: `dev`) - where to install the packages in the package.json dependency tree
 
 ### License
 
