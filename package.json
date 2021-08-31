@@ -1,6 +1,6 @@
 {
   "name": "depdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node.js dependency installer",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
